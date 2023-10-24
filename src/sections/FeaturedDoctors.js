@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import Slider from "react-slick";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import home_banner from "../assets/Images/Home_banner.png";
 import { motion, AnimatePresence } from "framer-motion"
 
 const dummyData = [
@@ -29,38 +27,7 @@ const dummyData = [
 ];
 
 export default function FeaturedDocters() {
-  const [slidesToShow, setSlidesToShow] = useState(4);
-  const [slidesToScroll, setSlidesToScroll] = useState(4);
-  const sliderRef = useRef(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setSlidesToShow(2); // Adjust the number of cards to show on smaller screens
-        setSlidesToScroll(2); // Adjust the number of cards to scroll on smaller screens
-      } else {
-        setSlidesToShow(4); // Reset the number of cards to show on larger screens
-        setSlidesToScroll(4); // Reset the number of cards to scroll on larger screens
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Call it initially
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    rows: 1,
-    slidesToShow: slidesToShow,
-    slidesToScroll: slidesToScroll,
-  };
 
   return (
     <div style={{ width: "85%", margin: "20px auto 0" }}>

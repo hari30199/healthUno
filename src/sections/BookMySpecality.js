@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import home_banner from "../assets/Images/Home_banner.png";
 import { motion, AnimatePresence } from "framer-motion"
 
 const dummyData = [
@@ -41,21 +40,20 @@ const dummyData = [
 export default function BookMySpecality() {
   const [slidesToShow, setSlidesToShow] = useState(4);
   const [slidesToScroll, setSlidesToScroll] = useState(4);
-  const sliderRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setSlidesToShow(2); // Adjust the number of cards to show on smaller screens
-        setSlidesToScroll(2); // Adjust the number of cards to scroll on smaller screens
+        setSlidesToShow(2); 
+        setSlidesToScroll(2); 
       } else {
-        setSlidesToShow(4); // Reset the number of cards to show on larger screens
-        setSlidesToScroll(4); // Reset the number of cards to scroll on larger screens
+        setSlidesToShow(4); 
+        setSlidesToScroll(4);
       }
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call it initially
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);

@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../src/components/Navbar'
-import Subnavbar from '../src/components/Subnavbar'
 import { Routes, Route } from 'react-router-dom';
 import HomePage from '../src/pages/HomePage';
 import Login from '../src/pages/Login'
@@ -17,7 +16,6 @@ const App = () => {
           <Route path="/SearchPage" element={<SearchPage />} />
           <Route path="/hospitalsScreen" element={<HospitalsScreen />} />
        </Routes>
-     {/* <Subnavbar /> */}
     
     </div>
   )

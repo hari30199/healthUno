@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -41,7 +41,6 @@ export default function OurServices(props) {
   const {title, enableViewAll} = props
   const [slidesToShow, setSlidesToShow] = useState(4);
   const [slidesToScroll, setSlidesToScroll] = useState(4);
-  const sliderRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,7 +54,7 @@ export default function OurServices(props) {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call it initially
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);

@@ -1,6 +1,4 @@
 import React from 'react'
-import {categories} from '../data/data.js'
-
 const dummyData = [
   {
   id:1,

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
-import Slider from "react-slick";
+import React, { } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import home_banner from "../assets/Images/Home_banner.png";
@@ -15,8 +14,8 @@ const dummyData = [
     location: "Location",
     sub_total: "100",
     img: home_banner,
-    opd:'OPD',
-    timings:"11:30:00 AM - 8:00:00 PM"
+    opd: "OPD",
+    timings: "11:30:00 AM - 8:00:00 PM",
   },
   {
     id: 2,
@@ -27,8 +26,8 @@ const dummyData = [
     location: "Location",
     sub_total: "100",
     img: home_banner,
-    opd:'OPD',
-    timings:"11:30:00 AM - 8:00:00 PM"
+    opd: "OPD",
+    timings: "11:30:00 AM - 8:00:00 PM",
   },
   {
     id: 3,
@@ -39,8 +38,8 @@ const dummyData = [
     location: "Location",
     sub_total: "100",
     img: home_banner,
-    opd:'OPD',
-    timings:"11:30:00 AM - 8:00:00 PM"
+    opd: "OPD",
+    timings: "11:30:00 AM - 8:00:00 PM",
   },
   {
     id: 4,
@@ -51,44 +50,12 @@ const dummyData = [
     location: "Location",
     sub_total: "100",
     img: home_banner,
-    opd:'OPD',
-    timings:"11:30:00 AM - 8:00:00 PM"
+    opd: "OPD",
+    timings: "11:30:00 AM - 8:00:00 PM",
   },
 ];
 
 export default function HospitalsScreen() {
-  const [slidesToShow, setSlidesToShow] = useState(4);
-  const [slidesToScroll, setSlidesToScroll] = useState(4);
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setSlidesToShow(2); // Adjust the number of cards to show on smaller screens
-        setSlidesToScroll(2); // Adjust the number of cards to scroll on smaller screens
-      } else {
-        setSlidesToShow(2); // Reset the number of cards to show on larger screens
-        setSlidesToScroll(2); // Reset the number of cards to scroll on larger screens
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Call it initially
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const settings = {
-    dots: false,
-    arrows: true,
-    infinite: true,
-    speed: 500,
-    rows: 1,
-    slidesToShow: slidesToShow,
-    slidesToScroll: slidesToScroll,
-  };
 
   return (
     <div style={{ width: "75%", margin: "30px auto 20px" }}>

@@ -1,7 +1,5 @@
 import React from "react";
 import HomeCarousel from "../components/HomeCarousel";
-import { Card } from "@material-tailwind/react";
-import Food from "../components/Food";
 import Category from "../components/Category";
 import OurServices from "../sections/OurServices";
 import FeaturedDocters from "../sections/FeaturedDoctors";
@@ -9,12 +7,6 @@ import BookMySpecality from "../sections/BookMySpecality";
 import home_banner from "../assets/Images/Home_banner.png";
 import PopularHeathPack from "../sections/PopularHeathPack";
 import TopBookedTests from "../sections/TopBookedTests";
-
-const dummyData = [
-  { id: 1, title: "new", image: "" },
-  { id: 2, title: "new", image: "" },
-  { id: 3, title: "new", image: "" },
-];
 
 export default function HomePage() {
   return (

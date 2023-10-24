@@ -9,10 +9,6 @@ import arrow_down from "../../src/assets/Images/arrow_down.svg";
 import close_oultine from "../../src/assets/Images/cancel_outline.svg";
 import {
   Drawer,
-  Button,
-  Typography,
-  IconButton,
-  Input,
 } from "@material-tailwind/react";
 import TextInput from "./InputContainer.js";
 import { Link } from "react-router-dom";
@@ -52,6 +48,7 @@ const Navbar = () => {
   const renderComponent = () => {
     return <Link to="/SearchPage"></Link>;
   };
+
 
   return (
     <div className="max-w-[1240px] top-0 py-5 items-center sticky mx-auto bg-white z-10">
@@ -129,7 +126,7 @@ const Navbar = () => {
             className="block  items-center justify-center"
             onClick={() => setSubOpen(!subOpen)}
           >
-            Select...
+            {selectedValue}
           </button>
           <img src={arrow_down} alt="Logo" className="w-4 h-4 ml-3" />
         </div>
@@ -166,13 +163,14 @@ const Navbar = () => {
           </ul>
         )}
       </div>
-
+      
       <Drawer
         placement="right"
         open={opendrawer}
         onClose={closeDrawer}
-        className="p-4"
+        className="p-4 bg-white"
         size={450}
+        onBlurCapture={undefined}
       >
         <div className="mb-6 flex items-center justify-between">
           <div

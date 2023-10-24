@@ -7,9 +7,7 @@ import bell_home from "../../src/assets/Images/bell_home.svg";
 import cart_home from "../../src/assets/Images/cart_home.svg";
 import arrow_down from "../../src/assets/Images/arrow_down.svg";
 import close_oultine from "../../src/assets/Images/cancel_outline.svg";
-import {
-  Drawer,
-} from "@material-tailwind/react";
+import {Drawer} from "@material-tailwind/react";
 import TextInput from "./InputContainer.js";
 import { Link } from "react-router-dom";
 
@@ -135,12 +133,12 @@ const Navbar = () => {
           <ul className="px-10 py-5">
             {SubLinks.map((link, index) => (
               <li key={index} className="my-2">
-                <a
-                  href={link.link}
+                <Link
+                  to={link.link}
                   className="text-blue_dark hover:text-blue-400 duration-500 font-sans text-4 font-normal"
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

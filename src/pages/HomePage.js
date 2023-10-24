@@ -96,13 +96,13 @@ export default function HomePage() {
           </div>
         </div>
       </>
-      <div className="fixed bottom-0 left-0 right-0 flex justify-end">
+      {/* <div className="fixed bottom-0 left-0 right-0 flex justify-end">
       <button className=" text-black px-4  bg-white">Button 1</button>
       <div className="border-r border-gray-400 h-5 bg-white"/>
       <button className=" text-black px-4  bg-white">Button 2</button>
       <div className="border-r border-gray-400 h-5 " />
       <button className=" text-black px-4 bg-white ">Button 2</button>
-    </div>
+    </div> */}
     </div>
   );
 }

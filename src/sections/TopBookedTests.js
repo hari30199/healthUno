@@ -95,14 +95,17 @@ export default function TopBookedTests(props) {
       style={{ width: "85%", margin: "20px auto 0" }}
       className="px-4 py-2 shadow-xl mt-4"
     >
-      <div className="flex justify-between items-center">
-        <div />
-        <div>
-          <h1 className="text-blue_dark text-2xl text-center">
-            Top Booked Tests
-          </h1>
+
+      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
+        <div className="md:w-1/4">
+          {/* Left empty for spacing, or you can add content */}
         </div>
-        <div className="text-blue_dark cursor-pointer">View all</div>
+        <div className="md:w-1/2 text-center">
+          <p className="text-blue_dark text-2xl md:text-3xl"> Top Booked Tests</p>
+        </div>
+        <div className="md:w-1/4 text-blue_dark cursor-pointer text-sm md:text-base text-right mt-4 md:mt-0">
+        View all
+        </div>
       </div>
       <div className="mt-2">
         <Slider {...settings}>

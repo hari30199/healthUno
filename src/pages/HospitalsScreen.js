@@ -61,7 +61,7 @@ export default function HospitalsScreen() {
     <div style={{ width: "75%", margin: "30px auto 20px" }}>
       <div className="mt-2">
         <AnimatePresence>
-          <div className="grid grid-cols-2 lg:grid-cols-2 gap-6 pt-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-6 pt-2">
             {dummyData.map((item, index) => (
               <motion.div
                 layout

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
 
 const dummyData = [
   {
@@ -44,10 +44,10 @@ export default function BookMySpecality() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setSlidesToShow(2); 
-        setSlidesToScroll(2); 
+        setSlidesToShow(2);
+        setSlidesToScroll(2);
       } else {
-        setSlidesToShow(4); 
+        setSlidesToShow(4);
         setSlidesToScroll(4);
       }
     };
@@ -71,24 +71,28 @@ export default function BookMySpecality() {
   };
 
   return (
-    <div style={{ width: "85%", margin: "30px auto 0"  }} className="bg-gray-100 rounded-lg py-5 px-10">
-        <div className="flex justify-between items-center">
-        <div/>
-      <div>
-        <h1 className="text-blue_dark text-2xl text-center">
-          Book By Speciality
-        </h1>
+    <div
+      style={{ width: "85%", margin: "30px auto 0" }}
+      className="bg-gray-100 rounded-lg py-5 px-10"
+    >
+      <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
+        <div className="md:w-1/4">
+          {/* Left empty for spacing, or you can add content */}
+        </div>
+        <div className="md:w-1/2 text-center">
+          <p className="text-blue_dark text-2xl md:text-3xl">
+            Book By Speciality
+          </p>
+        </div>
+        <div className="md:w-1/4 text-blue_dark cursor-pointer text-sm md:text-base text-right mt-4 md:mt-0">
+          View all
+        </div>
       </div>
-      <div className="text-blue_dark cursor-pointer">
-        View all
-      </div>
-    </div>
       <div className="mt-10">
-      <Slider {...settings}>
-        {dummyData.map((item) => (
+        <Slider {...settings}>
+          {dummyData.map((item) => (
             <AnimatePresence>
-            <div className="">
-              
+              <div className="">
                 <motion.div
                   layout
                   initial={{ opacity: 0 }}
@@ -103,21 +107,20 @@ export default function BookMySpecality() {
                     src={item.img}
                     alt={item.name}
                   />
-                  <div className="flex justify-center font-semibold text-blue_dark">
+                  <div className="flex justify-center font-semibold text-blue_dark ">
                     <p>{item.title}</p>
                   </div>
                   <div className="flex justify-center font-light ">
-                    <p>{'type'}</p>
+                    <p>{"type"}</p>
                   </div>
                   <div className="flex justify-center text-red-400">
-                    <p>{'price'}</p>
+                    <p>{"price"}</p>
                   </div>
                 </motion.div>
-            
-            </div>
-          </AnimatePresence>
-        ))}
-      </Slider>
+              </div>
+            </AnimatePresence>
+          ))}
+        </Slider>
       </div>
     </div>
   );

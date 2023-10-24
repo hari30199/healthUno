@@ -149,13 +149,13 @@ const Navbar = () => {
                 key={index}
                 className="md:ml-8 md:my-0 my-7 flex items-center"
               >
-                <a
+                <Link
                   href={link.link}
                   className="text-blue_dark hover:text-blue-400 duration-500 font-sans text-4 font-normal"
                   onClick={handleOptionClick}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
